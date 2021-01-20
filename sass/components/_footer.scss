@@ -1,0 +1,50 @@
+/*container*/
+.page-footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer-content {
+  display: flex;
+  align-items: baseline;
+}
+.page-footer {
+  background: $text-black-color;
+}
+
+/*Logo*/
+.footer-address .Web {
+  color: $title-blue-color;
+}
+.footer-address .studio {
+  color: $white-color;
+}
+.page-footer .Logo {
+  display: block;
+  margin-bottom: 20px;
+}
+/*div*/
+.footer-icon {
+  width: 206px;
+  margin-left: 70px;
+
+  & .icon-link:hover,
+  & .icon-link:focus {
+    background-color: $title-blue-color;
+  }
+}
+
+.footer-icon .icon-link {
+  color: $white-color;
+  background-color: $accent-footer-b-color;
+}
+/*p*/
+.footer-slogan {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: $white-color;
+}

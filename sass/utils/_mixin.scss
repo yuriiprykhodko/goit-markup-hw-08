@@ -1,0 +1,10 @@
+@mixin transition($type) {
+  transition-property: $type;
+  transition-duration: 250ms;
+  transition-timing-function: $timing-function;
+}
+@mixin center-flex($type) {
+  display: flex;
+  justify-content: $type;
+  align-items: center;
+} ;

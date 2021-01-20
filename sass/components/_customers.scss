@@ -1,0 +1,67 @@
+/*container*/
+.main-customers .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  text-align: center;
+}
+.main-customers {
+  background-color: $white-color;
+}
+/*h2*/
+.customers-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $text-black-color;
+}
+
+/*ul*/
+.customer-list {
+  width: 1170px;
+  @extend %margin-center;
+
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  @include center-flex(space-around);
+}
+/*li*/
+.customer-lable {
+  margin: 0px;
+  padding: 0px;
+}
+.customer-list .customer-lable + .customer-lable {
+  margin-left: 30px;
+}
+/*a*/
+.customer-link {
+  @include center-flex(center);
+
+  width: 170px;
+  height: 90px;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid $accent-border-a-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: $accent-border-a-color;
+
+  @include transition(color);
+  @include transition(border);
+
+  &:hover,
+  &:focus {
+    border: 1px solid $title-blue-color;
+    color: $title-blue-color;
+  }
+}
+/*svg*/
+.customer-icon {
+  display: block;
+  @extend %margin-center;
+
+  fill: currentColor;
+}

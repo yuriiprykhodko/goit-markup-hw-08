@@ -1,0 +1,47 @@
+.main-doing .container {
+  padding-bottom: 94px;
+}
+/*section*/
+.main-doing {
+  background-color: $white-color;
+}
+/*h2*/
+.doing-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $text-black-color;
+}
+/*ul*/
+.doing-list {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.doing-list .doing-link + .doing-link {
+  margin-left: 30px;
+}
+/*li*/
+.doing-link {
+  position: relative;
+}
+/*p*/
+.doing-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 0px;
+  padding: 27px 0;
+  background-color: $accent-text-decoretion-color;
+  text-transform: uppercase;
+  color: $white-color;
+  font-weight: 700;
+}

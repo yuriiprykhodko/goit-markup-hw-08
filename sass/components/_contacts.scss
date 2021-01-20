@@ -1,0 +1,30 @@
+/*ul*/
+.header-contacts {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+/*li*/
+.header-contacts .contacts-item + .contacts-item {
+  margin-left: 50px;
+  margin-right: auto;
+}
+/*a*/
+.contacts-link {
+  display: inline-flex;
+  align-items: center;
+  color: $accent-grey-color;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $title-blue-color;
+  }
+}
+/*svg*/
+.contacts-icon {
+  margin-right: 10px;
+  padding: 0px;
+  fill: currentColor;
+}

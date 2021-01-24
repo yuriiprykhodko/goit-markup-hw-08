@@ -1,0 +1,36 @@
+/*ul*/
+.social-icon {
+  @include center-flex(space-between);
+  margin: 0px;
+  padding: 0px;
+}
+/*li*/
+.social-icon .icon-list + .icon-list {
+  margin-left: 10px;
+}
+/*a*/
+.icon-link {
+  @include center-flex(center);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  color: $accent-border-a-color;
+
+  @include transition(color);
+  @include transition(background-color);
+}
+/*svg*/
+.icon {
+  display: block;
+  @extend %margin-center;
+  padding: 0px;
+
+  fill: currentColor;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  background-color: $title-blue-color;
+  color: $white-color;
+}

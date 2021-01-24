@@ -1,60 +1,101 @@
-.main-features .container {
-  @include center-flex(space-between);
-
-  padding-top: 94px;
-  padding-bottom: 94px;
-  text-align: left;
-}
-/*section*/
 .main-features {
-  background-color: $white-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 /*ul*/
 .features-list {
-  display: flex;
-  margin-top: 0px;
-  margin-bottom: 0px;
   padding: 0px;
-}
-/*li*/
-.features-link {
-  width: 270px;
-  display: block;
-  @extend %margin-center;
-}
-/*h3*/
-.features-title {
-  width: 270px;
-  margin-bottom: 10px;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $text-black-color;
-}
-/*p*/
-.features-description {
-  width: 270px;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: $accent-grey-color;
-}
-.features-list .features-link + .features-link {
-  margin-left: 30px;
-}
-/*div*/
-.features-lable {
-  width: 270px;
-  height: 120px;
   margin: 0px;
-  padding: 0px;
-  @include center-flex(center);
-  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
-  background-color: $accent-grayish-color;
+@media screen and (min-width: 1200px) {
+  .features-list {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .features-link:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-link {
+    width: calc((100% - 30px) / 2);
+  }
+  .features-link:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+
+  .features-link:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-link {
+    width: calc((100% - 3 * 30px) / 4);
+  }
+
+  .features-link:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+.features-lable {
+  padding: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: #f5f4fa;
+}
+
+.features-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.features-title {
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .features-title {
+    text-align: start;
+  }
+}
+
+.features-description {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: #757575;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+}
+
+.features-description::first-letter {
+  text-transform: capitalize;
 }

@@ -1,6 +1,6 @@
 /*ul*/
 .social-icon {
-  @include center-flex(space-between);
+  @include center-flex(center);
   margin: 0px;
   padding: 0px;
 }
@@ -20,17 +20,19 @@
   @include transition(color);
   @include transition(background-color);
 }
-/*svg*/
-.icon {
-  display: block;
-  @extend %margin-center;
-  padding: 0px;
-
-  fill: currentColor;
-}
 
 .icon-link:hover,
 .icon-link:focus {
   background-color: $title-blue-color;
   color: $white-color;
+}
+/*svg*/
+.icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  @extend %margin-center;
+  padding: 0px;
+
+  fill: currentColor;
 }

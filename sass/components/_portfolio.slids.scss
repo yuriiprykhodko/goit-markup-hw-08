@@ -1,40 +1,73 @@
 /*container*/
 .main-portfolio .container {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 15px;
 
-  background: $white-color;
+  background-color: $white-color;
+}
+@media screen and (min-width: 1200px) {
+  .main-portfolio .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 /*Слайди*/
 /*ul*/
+
+@media screen and (min-width: 768px) {
+  .portfolio-slids {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .portfolio-slids {
-  display: flex;
-  flex-wrap: wrap;
   padding: 0px;
   margin: 0px;
 }
 /*li*/
-.slids-filter {
-  width: 370px;
-  margin-right: 30px;
+.slids-filter:not(:last-child) {
   margin-bottom: 30px;
-  display: block;
-
-  background-color: $white-color;
 }
 
-.slids-filter:nth-child(3n) {
-  margin-right: 0px;
+@media screen and (min-width: 480px) {
+  .slids-filter {
+    width: 450px;
+  }
 }
-.slids-filter:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .slids-filter {
+    width: 354px;
+  }
+
+  .slids-filter:nth-child(-n + 8) {
+    margin-bottom: 30px;
+  }
+
+  .slids-filter:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
 }
+
+@media screen and (min-width: 1200px) {
+  .slids-filter {
+    width: 370px;
+  }
+  .slids-filter:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .slids-filter:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+}
+
 .slids-filter {
   position: relative;
 }
 /*a*/
 .filter {
   display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
 
   @include transition(box-shadow);
 
@@ -53,6 +86,24 @@
   position: relative;
   overflow: hidden;
 }
+@media screen and (min-width: 480px) {
+  .filter-image {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter-image {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-image {
+    width: 370px;
+  }
+}
+
 /*div*/
 .overlay {
   position: absolute;
@@ -70,16 +121,29 @@
   opacity: 0;
 }
 /*p*/
+@media screen and (min-width: 768px) {
+  .overlay-description {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay-description {
+    padding: 63px 24px;
+  }
+}
 .overlay-description {
   padding: 63px 24px;
   margin: 0;
 }
 /*div*/
+
 .filter-card {
-  width: 370px;
-  background-color: $white-color;
+  width: 100%;
   text-align: left;
-  padding: 20px 24px;
+  padding: 20px 20px 24px;
+
+  background-color: $white-color;
 
   border-right-width: 1px;
   border-right-style: solid;
@@ -93,9 +157,9 @@
   border-bottom-style: solid;
   border-bottom-color: $accent-border-b-color;
 }
+
 /*h3*/
 .filter-title {
-  width: 322px;
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -106,11 +170,10 @@
 }
 /*p*/
 .filter-description {
-  width: 322px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
+
   color: $accent-grey-color;
 }

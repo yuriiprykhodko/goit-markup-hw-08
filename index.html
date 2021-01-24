@@ -11,31 +11,38 @@
   <body>
     <header class="page-header">
       <div class="container">
-        <nav class="header-navigation">
-          <a href="./index.html" class="Logo"> <span class="Web">Web</span><span class="studio">Studio</span></a>
-          <ul class="nav-list">
-            <li class="list-item"><a class="list-link current" href="./index.html">Студия</a></li>
-            <li class="list-item"><a class="list-link" href="./portfolio.html">Портфолио</a></li>
-            <li class="list-item"><a class="list-link" href="">Контакти</a></li>
+        <a href="./index.html" class="Logo"> <span class="Web">Web</span><span class="studio">Studio</span></a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg width="40px" height="40px" aria-label="переключатель мобильного меню">
+            <use class="icon-mobile-close" href="./images/symbol-defs.svg#icon-close_24px"></use>
+            <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu_24px"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="header-navigation">
+            <ul class="nav-list">
+              <li class="list-item current"><a class="list-link current" href="./index.html">Студия</a></li>
+              <li class="list-item"><a class="list-link" href="./portfolio.html">Портфолио</a></li>
+              <li class="list-item"><a class="list-link" href="">Контакти</a></li>
+            </ul>
+          </nav>
+          <ul class="header-contacts">
+            <li class="contacts-item">
+              <a class="contacts-link" href="mailto:info@devstudio.com">
+                <svg class="contacts-icon" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="contacts-item">
+              <a class="contacts-link" href="tel:+380961111111">
+                <svg class="contacts-icon" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
+                >+380961111111</a
+              >
+            </li>
           </ul>
-        </nav>
-        <ul class="header-contacts">
-          <li class="contacts-item">
-            <a class="contacts-link" href="mailto:info@devstudio">
-              <svg class="contacts-icon" width="16" height="12">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
-              >info@devstudio</a
-            >
-          </li>
-          <li class="contacts-item">
-            <a class="contacts-link" href="tel:+380961111111">
-              <svg class="contacts-icon" width="10" height="16">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +380961111111</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <main class="main-sections">
@@ -159,15 +166,30 @@
           <h2 class="doing-title">Чем мы занимаемся</h2>
           <ul class="doing-list">
             <li class="doing-link">
-              <img src="./images/box11.jpg" alt="Набираем код" width="370" />
+              <img
+                srcset="./images/doing-img1@1x.jpg, ./images/doing-img1@2x.jpg"
+                src="./doing-img1@1x.jpg"
+                alt="десктопные приложения"
+                width="370"
+              />
               <p class="doing-description">десктопные приложения</p>
             </li>
             <li class="doing-link">
-              <img src="./images/box22.jpg" alt="Создаем приложения для мобильных устройств" width="370" />
+              <img
+                srcset="./images/doing-img2@1x.jpg, ./images/doing-img2@2x.jpg"
+                src="./images/doing-img2@1x.jpg"
+                alt="мобильные приложения"
+                width="370"
+              />
               <p class="doing-description">мобильные приложения</p>
             </li>
             <li class="doing-link">
-              <img src="./images/box33.jpg" alt="Создаем приложения для планшетов" width="370" />
+              <img
+                srcset="./images/doing-img3@1x.jpg, ./images/doing-img3@1x.jpg"
+                src="./images/doing-img3@1x.jpg"
+                alt="дизайнерские решения"
+                width="370"
+              />
               <p class="doing-description">дизайнерские решения</p>
             </li>
           </ul>
@@ -178,7 +200,24 @@
           <h2 class="comand-title">Наша команда</h2>
           <ul class="comand-list">
             <li class="comand-link">
-              <img src="./images/img(44).jpg" alt="Product designer" width="270" />
+              <picture>
+                <source
+                  srcset="./images/demianenko-desctop-opt@1x.jpg 1x, ./images/demianenko-desctop-opt@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                  type="image/jpg"
+                />
+                <source srcset=" ./images/demianenko-tablet-opt@1x.jpg 1x, ./images/demianenko-tablet-opt@1x.jpg 2x"
+                media="(min-width:768px)" sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                type="image/
+                <source
+                  srcset="./images/demianenko-mobile-opt@1x.jpg 1x, ./images/demianenko-mobile-opt@2x.jpg 2x"
+                  media="(max-width:767px)"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                  type="image/jpg"
+                />
+                <img src="./images/demianenko-mobile-opt@1x.jpg" alt="Фото сотрудника" />
+              </picture>
               <div class="comand-card">
                 <h3 class="card-title">Игорь Демяненко</h3>
                 <p class="card-description">Product designer</p>
@@ -215,7 +254,26 @@
               </div>
             </li>
             <li class="comand-link">
-              <img src="./images/img(55).jpg" alt="Frontend developer" width="270" />
+              <picture>
+                <source
+                  srcset="./images/repina-desctop-opt@1x.jpg 1x, ./images/repina-desctop-opt@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="./images/repina-tablet-opt@1x.jpg 1x, ./images/repina-tablet-opt@2x.jpg 2x"
+                  media="(min-width:768px)"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                  type="image/jpg"
+                  <source
+                  srcset="./images/repina-mobile-opt@1x.jpg 1x, ./images/repina-mobile-opt@2x.jpg 2x"
+                  media="(max-width:767px)"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                  type="image/jpg"
+                />
+                <img src="./images/repina-mobile-opt@1x.jpg" alt="Фото сотрудника" />
+              </picture>
               <div class="comand-card">
                 <h3 class="card-title">Ольга Репина</h3>
                 <p class="card-description">Frontend developer</p>
@@ -252,7 +310,24 @@
               </div>
             </li>
             <li class="comand-link">
-              <img src="./images/img(66).jpg" alt="Marketing" width="270" />
+              <picture>
+                <source
+                  srcset="./images/tarasov-desctop-opt@1x.jpg 1x, ./images/tarasov-desctop-opt@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                  type="image/jpg"
+                />
+                <source srcset=" ./images/tarasov-tablet-opt@1x.jpg 1x, ./images/tarasov-tablet-opt@1x.jpg 2x"
+                media="(min-width:768px)" sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                type="image/
+                <source
+                  srcset="./images/tarasov-mobile-opt@1x.jpg 1x, ./images/tarasov-mobile-opt@2x.jpg 2x"
+                  media="(max-width:767px)"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                  type="image/jpg"
+                />
+                <img src="./images/tarasov-mobile-opt@1x.jpg" alt="Фото сотрудника" />
+              </picture>
               <div class="comand-card">
                 <h3 class="card-title">Николай Тарасов</h3>
                 <p class="card-description">Marketing</p>
@@ -289,7 +364,24 @@
               </div>
             </li>
             <li class="comand-link">
-              <img src="./images/img(77).jpg" alt="UI Designer" width="270" />
+              <picture>
+                <source
+                  srcset="./images/ermakov-desctop-opt@1x.jpg 1x, ./images/ermakov-desctop-opt@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                  type="image/jpg"
+                />
+                <source srcset=" ./images/ermakov-tablet-opt@1x.jpg 1x, ./images/ermakov-tablet-opt@1x.jpg 2x"
+                media="(min-width:768px)" sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                type="image/
+                <source
+                  srcset="./images/ermakov-mobile-opt@1x.jpg 1x, ./images/ermakov-mobile-opt@2x.jpg 2x"
+                  media="(max-width:767px)"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                  type="image/jpg"
+                />
+                <img src="./images/ermakov-mobile-opt@1x.jpg" alt="Фото сотрудника" />
+              </picture>
               <div class="comand-card">
                 <h3 class="card-title">Михаил Ермаков</h3>
                 <p class="card-description">UI Designer</p>
@@ -437,5 +529,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

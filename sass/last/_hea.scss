@@ -1,0 +1,107 @@
+.page-header .container {
+  @include center-flex(space-between);
+}
+.page-header {
+  background-color: $white-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $accent-header-border-color;
+}
+.page-header .Logo {
+  margin-left: auto;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-bottom: 0px;
+}
+/*Web*/
+.header-navigation .Web {
+  color: $title-blue-color;
+}
+/*studio*/
+.header-navigation .studio {
+  color: $text-black-color;
+}
+.header-navigation {
+  @include center-flex(space-around);
+}
+/*ul*/
+
+.nav-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  color: $text-black-color;
+}
+/*li*/
+.nav-list .list-item + .list-item {
+  margin-left: 50px;
+}
+/*a*/
+.list-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $title-blue-color;
+  }
+}
+.list-link.current {
+  color: $title-blue-color;
+}
+/*li*/
+.list-item {
+  position: relative;
+}
+
+/*a*/
+.list-link.current::after {
+  position: absolute;
+  bottom: 0px;
+
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: $title-blue-color;
+  border-radius: 2px;
+}
+/*ul*/
+.header-contacts {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+/*li*/
+.header-contacts .contacts-item + .contacts-item {
+  margin-left: 50px;
+  margin-right: auto;
+}
+/*a*/
+.contacts-link {
+  display: inline-flex;
+  align-items: center;
+  color: $accent-grey-color;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $title-blue-color;
+  }
+}
+/*svg*/
+.contacts-icon {
+  margin-right: 10px;
+  padding: 0px;
+  fill: currentColor;
+}

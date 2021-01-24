@@ -1,41 +1,109 @@
-/*container*/
-.main-hero .container {
-  width: 770px;
-  text-align: center;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-/*section*/
 .main-hero {
-  padding: 200px 0;
-  max-width: 1600px;
-  height: 600px;
-  @extend %margin-center;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-bottom: 118px;
+  padding-top: 118px;
+  text-align: center;
+}
 
-  background-color: $text-black-color;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+@media screen and (max-width: 767px) {
+  .main-hero {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-hero {
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
+}
+
+.main-hero {
+  @extend %margin-center;
+  background-color: #2f303a;
+  height: 400px;
+  max-width: 480px;
   background-position: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-mobile-opt@1x.jpg);
+  background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .main-hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-mobile-opt@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .main-hero {
+    height: 400px;
+    max-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-tablet-opt@1x.jpg);
+  }
+}
+
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 480px) and (min-resolution: 192dpi),
+  screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .main-hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-tablet-opt@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-hero {
+    height: 400px;
+    max-width: 1600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-desctop-opt@1x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .main-hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-desctop-opt@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-hero {
+    height: 600px;
+    max-width: 1600px;
+  }
 }
 /*h1*/
 .hero {
-  width: 696px;
-  margin: auto;
+  margin: 0px;
   margin-bottom: 30px;
 
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: $white-color;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: 696px;
+    margin: auto;
+
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    line-height: 1.36;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white-color;
+  }
 }
 /*button*/
-
 .hero-button {
   width: 200px;
   height: 50px;
@@ -45,16 +113,21 @@
   background-color: $title-blue-color;
   border-radius: 4px;
 }
+/*span*/
 .hero-button-name {
-  width: 200px;
-  padding: 0px;
-  border: 0px;
-
+  @include center-flex(center);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 2px;
+  min-width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  background-color: #2196f3;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.8;
-  align-items: center;
-  text-align: center;
+  line-height: 1.87;
   letter-spacing: 0.06em;
-  color: $white-color;
 }

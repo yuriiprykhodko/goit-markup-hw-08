@@ -1,16 +1,15 @@
-/*container*/
+/*section*/
 .page-footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-content {
-  display: flex;
-  align-items: baseline;
-}
 .page-footer {
   background: $text-black-color;
+  font-style: normal;
 }
-
+.page-footer .container {
+  text-align: center;
+}
 /*Logo*/
 .footer-address .Web {
   color: $title-blue-color;
@@ -23,28 +22,114 @@
   margin-bottom: 20px;
 }
 /*div*/
-.footer-icon {
-  width: 206px;
-  margin-left: 70px;
-
-  & .icon-link:hover,
-  & .icon-link:focus {
-    background-color: $title-blue-color;
+@media screen and (min-width: 1200px) {
+  .footer-content {
+    display: flex;
+    align-items: baseline;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+}
+/*div*/
+@media screen and (min-width: 1200px) {
+  .footer-content {
+    text-align: start;
+    flex-wrap: nowrap;
+  }
+}
+/*div*/
+.footer-address {
+  margin-bottom: 60px;
+}
 
+@media screen and (min-width: 768px) {
+  .footer-address {
+    margin-left: 61px;
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-address {
+    width: 231px;
+    margin-left: 0px;
+    margin-right: 70px;
+    margin-bottom: 0px;
+  }
+}
+/*p*/
+.address-description {
+  color: $white-color;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+/*p*/
+@media screen and (min-width: 768px) {
+  .address-description {
+    margin-bottom: 9px;
+  }
+}
+/*a*/
+.address-name {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address-name:not(:last-child) {
+  margin-bottom: 9px;
+}
+/*div*/
+.footer-icon {
+  display: block;
+}
+.footer-icon .icon-link:hover,
+.footer-icon .icon-link:focus {
+  background-color: $title-blue-color;
+}
 .footer-icon .icon-link {
   color: $white-color;
   background-color: $accent-footer-b-color;
 }
+
+@media screen and (max-width: 767px) {
+  .footer-icon {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-icon {
+    margin-right: 74px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-icon {
+    margin-right: 93px;
+  }
+}
 /*p*/
 .footer-slogan {
-  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 20px;
 
   color: $white-color;
 }

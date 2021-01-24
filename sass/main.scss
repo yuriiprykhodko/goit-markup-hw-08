@@ -5,8 +5,8 @@
 @import "./base/hidden";
 @import "./utils/mixin";
 @import "./utils/placeholders";
+@import "./utils/breakpoints";
 @import "./components/header";
-@import "./components/contacts";
 @import "./components/logo";
 @import "./components/hero";
 @import "./components/modal";
@@ -16,7 +16,6 @@
 @import "./components/social.icons";
 @import "./components/customers";
 @import "./components/footer";
-@import "./components/address";
 @import "./components/form";
-@import "./components/cards";
-@import "./components/buttons.filters";
+@import "./components/portfolio.slids";
+@import "./components/portfolio.buttons";

@@ -13,31 +13,38 @@
   <body>
     <header class="page-header">
       <div class="container">
-        <nav class="header-navigation">
-          <a href="./index.html" class="Logo"> <span class="Web">Web</span><span class="studio">Studio</span></a>
-          <ul class="nav-list">
-            <li class="list-item"><a class="list-link" href="./index.html">Студия</a></li>
-            <li class="list-item"><a class="list-link current" href="./portfolio.html">Портфолио</a></li>
-            <li class="list-item"><a class="list-link" href="">Контакти</a></li>
+        <a href="./index.html" class="Logo"> <span class="Web">Web</span><span class="studio">Studio</span></a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg width="40px" height="40px" aria-label="переключатель мобильного меню">
+            <use class="icon-mobile-close" href="./images/symbol-defs.svg#icon-close_24px"></use>
+            <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu_24px"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="header-navigation">
+            <ul class="nav-list">
+              <li class="list-item"><a class="list-link" href="./index.html">Студия</a></li>
+              <li class="list-item current"><a class="list-link current" href="./portfolio.html">Портфолио</a></li>
+              <li class="list-item"><a class="list-link" href="">Контакти</a></li>
+            </ul>
+          </nav>
+          <ul class="header-contacts">
+            <li class="contacts-item">
+              <a class="contacts-link" href="mailto:info@devstudio.com">
+                <svg class="contacts-icon" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="contacts-item">
+              <a class="contacts-link" href="tel:+380961111111">
+                <svg class="contacts-icon" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
+                >+380961111111</a
+              >
+            </li>
           </ul>
-        </nav>
-        <ul class="header-contacts">
-          <li class="contacts-item">
-            <a class="contacts-link" href="mailto:info@devstudio">
-              <svg class="contacts-icon" width="16" height="12">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
-              >info@devstudio</a
-            >
-          </li>
-          <li class="contacts-item">
-            <a class="contacts-link" href="tel:+380961111111">
-              <svg class="contacts-icon" width="10" height="16">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +380961111111</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <main class="main-portfolio">
@@ -66,7 +73,27 @@
           <li class="slids-filter">
             <a class="filter" href="#">
               <div class="filter-image">
-                <img src="./images/img(88).jpg" alt="Веб-сайт" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/project-1desctop-opt@1x.jpg, ./images/project-1desktop-opt@2x.jpg"
+                    media="(min-width:1200px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-1tablet-opt@1x.jpg, ./images/project-1tablet-opt@2x.jpg"
+                    media="(min-width:768px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-1mobile-opt@1x.jpg, ./images/project-1mobile-opt@2x.jpg"
+                    media="(max-width:767px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <img src="./images/project-1desctop-opt@1x.jpg" alt="проект 1" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-description">
                     Технокряк это современная площадка распостранения коранавируса. Компании использують эту платформу
@@ -83,7 +110,28 @@
           <li class="slids-filter">
             <a class="filter" href="#">
               <div class="filter-image">
-                <img src="./images/img(99).jpg" alt="Веб-сайт" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/project-2desctop-opt@1x.jpg 1x, ./images/project-2desctop-opt@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-2tablet-opt@1x.jpg 1x, ./images/project-2tablet-opt@2x.jpg 2x"
+                    media="(min-width:768px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    srcset="./images/project-2mobile-opt@1x.jpg 1x, ./images/project-2mobile-opt@2x.jpg 2x"
+                    media="(max-width:767px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <img src="./images/project-2-desctop-opt@1x.jpg" alt="проект 2" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-description">
                     Технокряк это современная площадка распостранения коранавируса. Компании использують эту платформу
@@ -100,7 +148,28 @@
           <li class="slids-filter">
             <a class="filter" href="#">
               <div class="filter-image">
-                <img src="./images/img(100).jpg" alt="Веб-сайт" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/project-3desctop-opt@1x.jpg 1x, ./images/project-3desctop-opt@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-3tablet-opt@1x.jpg 1x, ./images/project-3tablet-opt@2x.jpg 2x"
+                    media="(min-width:768px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    srcset="./images/project-3mobile-opt@1x.jpg 1x, ./images/project-3mobile-opt@2x.jpg 2x"
+                    media="(max-width:767px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <img src="./images/project-3desctop-opt@1x.jpg" alt="проект 3" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-description">
                     Технокряк это современная площадка распостранения коранавируса. Компании использують эту платформу
@@ -117,7 +186,28 @@
           <li class="slids-filter">
             <a class="filter" href="#">
               <div class="filter-image">
-                <img src="./images/img(110).jpg" alt="Веб-сайт" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/project-4desctop-opt@1x.jpg 1x, ./images/project-4desctop-opt@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-4tablet-opt@1x.jpg 1x, ./images/project-4tablet-opt@2x.jpg 2x"
+                    media="(min-width:768px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    srcset="./images/project-4mobile-opt@1x.jpg 1x, ./images/project-4mobile-opt@2x.jpg 2x"
+                    media="(max-width:767px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <img src="./images/project-4desctop-opt@1x.jpg" alt="проект 4" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-description">
                     Технокряк это современная площадка распостранения коранавируса. Компании использують эту платформу
@@ -134,7 +224,27 @@
           <li class="slids-filter">
             <a class="filter" href="#">
               <div class="filter-image">
-                <img src="./images/img(120).jpg" alt="Веб-сайт" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/project-5desctop-opt@1x.jpg 1x, ./images/project-5desctop-opt@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-5tablet-opt@1x.jpg 1x, ./images/project-5tablet-opt@2x.jpg 2x"
+                    media="(min-width:768px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-5mobile-opt@1x.jpg 1x, ./images/project-5mobile-opt@2x.jpg 2x"
+                    media="(max-width:767px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <img src="./images/project-5desctop-opt@1x.jpg" alt="проект 5" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-description">
                     Технокряк это современная площадка распостранения коранавируса. Компании использують эту платформу
@@ -151,7 +261,28 @@
           <li class="slids-filter">
             <a class="filter" href="#">
               <div class="filter-image">
-                <img src="./images/img(130).jpg" alt="Веб-сайт" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/project-6desctop-opt@1x.jpg 1x, ./images/project-6desctop-opt@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-6tablet-opt@1x.jpg 1x, ./images/project-6tablet-opt@2x.jpg 2x"
+                    media="(min-width:768px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    srcset="./images/project-6mobile-opt@1x.jpg 1x, ./images/project-6mobile-opt@2x.jpg 2x"
+                    media="(max-width:767px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <img src="./images/project-6desctop-opt@1x.jpg" alt="проект 6" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-description">
                     Технокряк это современная площадка распостранения коранавируса. Компании использують эту платформу
@@ -168,7 +299,28 @@
           <li class="slids-filter">
             <a class="filter" href="#">
               <div class="filter-image">
-                <img src="./images/img(140).jpg" alt="Веб-сайт" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/project-7desctop-opt@1x.jpg 1x, ./images/project-7desctop-opt@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-7tablet-opt@1x.jpg 1x, ./images/project-7tablet-opt@2x.jpg 2x"
+                    media="(min-width:768px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    srcset="./images/project-7mobile-opt@1x.jpg 1x, ./images/project-7mobile-opt@2x.jpg 2x"
+                    media="(max-width:767px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <img src="./images/project-7desctop-opt@1x.jpg" alt="проект 7" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-description">
                     Технокряк это современная площадка распостранения коранавируса. Компании использують эту платформу
@@ -185,7 +337,28 @@
           <li class="slids-filter">
             <a class="filter" href="#">
               <div class="filter-image">
-                <img src="./images/img(150).jpg" alt="Веб-сайт" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/project-8desctop-opt@1x.jpg 1x, ./images/project-8desctop-opt@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-8tablet-opt@1x.jpg 1x, ./images/project-8tablet-opt@2x.jpg 2x"
+                    media="(min-width:768px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    srcset="./images/project-8mobile-opt@1x.jpg 1x, ./images/project-8mobile-opt@2x.jpg 2x"
+                    media="(max-width:767px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <img src="./images/project-8desctop-opt@1x.jpg" alt="проект 8" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-description">
                     Технокряк это современная площадка распостранения коранавируса. Компании использують эту платформу
@@ -202,7 +375,28 @@
           <li class="slids-filter">
             <a class="filter" href="#">
               <div class="filter-image">
-                <img src="./images/img(160).jpg" alt="Веб-сайт" width="370" />
+                <picture>
+                  <source
+                    srcset="./images/project-9desctop-opt@1x.jpg 1x, ./images/project-9desctop-opt@2x.jpg 2x"
+                    media="(min-width:1200px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="./images/project-9tablet-opt@1x.jpg 1x, ./images/project-9tablet-opt@2x.jpg 2x"
+                    media="(min-width:768px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    srcset="./images/project-9mobile-opt@1x.jpg 1x, ./images/project-9mobile-opt@2x.jpg 2x"
+                    media="(max-width:767px)"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 450px"
+                    type="image/jpg"
+                  />
+                  <img src="./images/project-9desctop-opt@1x.jpg" alt="проект 9" />
+                </picture>
                 <div class="overlay">
                   <p class="overlay-description">
                     Технокряк это современная площадка распостранения коранавируса. Компании использують эту платформу

@@ -1,75 +1,127 @@
-/*container*/
-.main-comand .container {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  text-align: center;
-}
 /*section*/
 .main-comand {
-  background: $accent-grayish-color;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  background-color: #f5f4fa;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-comand {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 /*h2*/
 .comand-title {
-  margin-bottom: 50px;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $text-black-color;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .comand-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 /*ul*/
 .comand-list {
-  width: 1170px;
-
-  @extend %margin-center;
-
   padding: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-
-  @include center-flex(space-around);
-
-  background: $accent-grayish-color;
+}
+@media screen and (max-width: 767px) {
+  .comand-list {
+    text-align: center;
+  }
 }
 
+@media screen and (min-width: 768px) {
+  .comand-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comand-list {
+    flex-wrap: nowrap;
+  }
+}
 /*li*/
 .comand-link {
-  width: 270px;
-  display: block;
-
-  @extend %margin-center;
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
-  background: $white-color;
+  background-color: #fff;
 }
-.comand-list .comand-link + .comand-link {
-  margin-left: 30px;
+
+@media screen and (max-width: 767px) {
+  .comand-link {
+    width: 100%;
+  }
+
+  .comand-link:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .comand-link {
+    width: calc((100% - 30px) / 2);
+  }
+
+  .comand-link:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+
+  .comand-link:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .comand-link {
+    width: calc((100% - 3 * 30px) / 4);
+  }
+
+  .comand-link:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+.comand-link img {
+  width: 450px;
+}
+
+@media screen and (min-width: 768px) {
+  .comand-link img {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comand-link img {
+    width: 270px;
+  }
+}
+/*div*/
+.comand-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 32px;
+  padding-left: 32px;
 }
 /*h3*/
 .card-title {
   margin-bottom: 10px;
-
-  font-weight: 500;
+  color: #212121;
   font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
+  font-weight: 500;
   letter-spacing: 0.03em;
-  color: $text-black-color;
+  text-transform: capitalize;
 }
 /*p*/
 .card-description {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $accent-grey-color;
   margin-bottom: 16px;
-}
-.comand-card {
-  padding: 30px 32px;
+  color: #757575;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
 }

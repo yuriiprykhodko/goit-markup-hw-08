@@ -12,12 +12,7 @@
 
   @include transition(opacity);
 }
-/*
-@media screen and (max-width: 479px) {
-  .backdrop {
-    padding: 94px 5px;
-  }
-}*/
+
 @media screen and (max-width: 479px) {
   .backdrop {
     padding: 50px 15px;
@@ -175,6 +170,11 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: $accent-grey-color;
+}
+@media screen and (max-width: 1199px) {
+  .checkbox-label {
+    font-size: 12px;
+  }
 }
 .checkbox-label::before {
   display: inline-block;

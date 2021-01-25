@@ -90,25 +90,23 @@
 }
 /*a*/
 .customer-link {
-  display: flex;
   width: 100%;
   height: 100%;
-  border: 1px solid #afb1b8;
+  border: 1px solid $accent-border-a-color;
   border-radius: 4px;
-  justify-content: center;
-  align-items: center;
-  color: #afb1b8;
-  transition-property: color, border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @include center-flex(center);
+  color: $accent-border-a-color;
 
-.customer-link:hover,
-.customer-link:focus {
-  border: 1px solid #2196f3;
-  color: #2196f3;
-}
+  @include transition(color);
+  @include transition(border);
 
+  &:hover,
+  &:focus {
+    border: 1px solid $title-blue-color;
+    color: $title-blue-color;
+  }
+}
+/*svg*/
 .customer-icon {
   fill: currentColor;
 }

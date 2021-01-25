@@ -1,6 +1,5 @@
 .page-header .container {
-  display: flex;
-  align-items: center;
+  @include center-flex(space-between);
   min-height: 60px;
 }
 /*section*/
@@ -21,7 +20,6 @@
 /*logo*/
 @media screen and (min-width: 1200px) {
   .page-header .Logo {
-    /*margin-left: auto;*/
     margin-right: 93px;
     padding-top: 24px;
     padding-bottom: 25px;
@@ -31,7 +29,6 @@
 
 @media screen and (min-width: 768px) {
   .page-header .Logo {
-    /*margin-left: auto;*/
     margin-right: 88px;
     margin-bottom: 0px;
     padding-top: 26px;
@@ -46,21 +43,26 @@
     width: 100%;
     top: 0;
     left: 0;
-    justify-content: space-between;
     background-color: $white-color;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $accent-header-border-color;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-header {
+    height: 60px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .page-header.container {
+  .page-header .container {
     min-height: 80px;
-  }
-}
-/*@media screen and (min-width: 1200px) {
-  .page-header.container {
     @include center-flex(space-between);
   }
-}*/
+}
+
 /*button*/
 .menu-button {
   display: inline-flex;
@@ -92,22 +94,20 @@
 }
 .icon-menu,
 .icon-mobile-close {
-  fill: #212121;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $text-black-color;
+  @include transition(fill);
 }
 
 .icon-menu:hover,
 .icon-menu:focus,
 .icon-mobile-close:hover,
 .icon-mobile-close:focus {
-  fill: #2196f3;
+  fill: $title-blue-color;
 }
 /*div*/
 @media screen and (max-width: 767px) {
   .menu-container {
-    background-color: #fff;
+    background-color: $white-color;
     padding: 60px;
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -186,22 +186,21 @@
 .list-link {
   position: relative;
   display: inline-block;
-  color: #212121;
+  color: $text-black-color;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.14;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @include transition(color);
 
-.list-link:hover,
-.list-link:focus,
+  &:hover,
+  &:focus {
+    color: $title-blue-color;
+  }
+}
 .list-link.current {
-  color: #2196f3;
+  color: $title-blue-color;
 }
-
 @media screen and (min-width: 768px) {
   .list-link {
     font-size: 14px;
@@ -227,7 +226,7 @@
 /*ul*/
 .header-contacts {
   padding: 0px;
-  margin-top: 0px;
+  margin: 0px;
 }
 /*ul*/
 @media screen and (max-width: 767px) {
@@ -235,30 +234,20 @@
     margin-bottom: 60px;
   }
 }
-.header-contacts {
-  padding: 0px;
-}
+
 @media screen and (min-width: 768px) {
   .header-contacts {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px;
+    margin-left: 84px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header-contacts {
-    margin-right: auto;
-    margin-left: 0px;
+    margin-left: 305px;
   }
 }
 /*li*/
-
-@media screen and (min-width: 1200px) {
-  .contacts-item {
-    display: flex;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .contacts-item:not(:last-child) {
     margin-bottom: 16px;
@@ -274,7 +263,6 @@
 @media screen and (min-width: 1200px) {
   .contacts-item:not(:last-child) {
     margin-right: 30px;
-    margin-right: auto;
   }
 }
 /*a*/
@@ -282,7 +270,7 @@
   display: inline-flex;
   align-items: center;
 
-  color: #757575;
+  color: $accent-grey-color;
 
   font-weight: 500;
   line-height: 1.14;
@@ -290,19 +278,11 @@
   align-items: center;
   font-size: 18px;
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @include transition(color);
 
-.contacts-link:hover,
-.contacts-link:focus {
-  color: #2196f3;
-}
-
-@media screen and (max-width: 767px) {
-  .contacts-link {
-    justify-content: center;
+  &:hover,
+  &:focus {
+    color: $title-blue-color;
   }
 }
 
@@ -316,27 +296,12 @@
   .contacts-link {
     padding-top: 32px;
     padding-bottom: 32px;
-    justify-content: space-between;
     font-size: 14px;
   }
 }
 /*svg*/
 .contacts-icon {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: currentColor;
-}
-.contacts-icon {
-  margin-right: 10px;
   padding: 0px;
-  fill: currentColor;
-}
-
-/*
-.contacts-icon {
-  width: 10px;
-  height: 16px;
   margin-right: 10px;
   fill: currentColor;
-}*/
+}

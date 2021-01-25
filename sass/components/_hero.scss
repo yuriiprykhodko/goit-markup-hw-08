@@ -1,15 +1,16 @@
+/*section*/
 .main-hero {
   padding-bottom: 118px;
   padding-top: 118px;
   text-align: center;
 }
-
+/*
 @media screen and (max-width: 767px) {
   .main-hero {
     margin-top: 60px;
   }
 }
-
+*/
 @media screen and (min-width: 1200px) {
   .main-hero {
     padding-bottom: 200px;
@@ -19,7 +20,7 @@
 
 .main-hero {
   @extend %margin-center;
-  background-color: #2f303a;
+  background-color: $text-black-color;
   height: 400px;
   max-width: 480px;
   background-position: center;
@@ -79,7 +80,6 @@
 }
 /*h1*/
 .hero {
-  margin: 0px;
   margin-bottom: 30px;
 
   color: $white-color;
@@ -91,8 +91,7 @@
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 696px;
-    margin: auto;
+    margin-bottom: 30px;
 
     font-size: 44px;
     font-weight: 900;
